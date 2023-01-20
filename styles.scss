@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+    font-family: monospace;
+
+}
+
+.container{
+    position: relative;
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex
+    ;
+    justify-content: space-around;
+    background: linear-gradient(to bottom right, lightblue,blue,whitesmoke);
+
+}
+
+.container .logo{
+     position: absolute;
+    height: 50px;
+    width: 250px;
+    background: linear-gradient(to right,green,greenyellow);
+    border-bottom-right-radius: 20px;
+    border-top-left-radius:20px ;
+    float: left;
+    margin: 25px;
+    top: 10px;
+    left: 20px;
+    text-align: center;
+}
+
+.container .logo:hover{
+    z-index: 2;
+}
+
+
+.container .list{
+    position: absolute;
+   // float: right;
+   right: 25px;
+    width: auto;
+    top: 120px;
+    background-color: gray;
+}
+
+.container .list ul{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .list ul li ul{
+    position: relative;
+    display: none;
+    
+}
+.container .list ul li{
+    background-color: blueviolet;
+    width: 100px;
+    box-shadow: 5px 4px 23px greenyellow;
+    border: 1px solid gray;
+    padding-left: 12px;
+    list-style: none;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+.container .list ul li a{
+    text-decoration: none;
+   // font: 18px italic monospace white;
+   font-size: 18px;
+   color: white;
+   font-weight: bold;
+   font-style: italic;
+
+}
+
+
+@media screen and (max-width:500px) {
+    .container .list ul{
+        display: block;
+        box-shadow: 5px 6px 28px burlywood;
+        border: 1px solid gainsboro;
+        background: transparent;
+        padding-left: 10px;
+
+    }
+
+    .container .list ul li{
+        margin-top: 14px;
+        width: 269px;
+        background: transparent;
+        border: 1px solid gray;
+        box-shadow: none;
+    }
+    .container{
+        width: 500px;
+    }
+
+    .container .list ul li ul{
+        // display: flex;
+
+        float: right;
+    }
+    
+}
+
+.container .list ul li .fa{
+    color: green;
+
+}
+.container .list ul li:hover{
+
+    background: transparent;
+    border: 2px solid whitesmoke;
+    box-shadow: 3px 4px 25px greenyellow;
+    padding-left: 6px;
+}
+
+
+.container .list ul li ul li{
+
+    cursor: pointer; 
+
+    margin-top: 16px;
+    border-bottom-left-radius: 19px;
+    border-top-right-radius: 19px;
+    width: 145px;
+} 
+
+.container .list ul li ul{
+    background: transparent;
+    box-shadow: 4px 5px 28px greenyellow;
+    border: 1px solid gray;
+    width: 180px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+
+.container .list ul li:hover ul{
+    display: block;
+}
+ 
+
+
+
+// let us confuse them
+
+
+.toggle{
+
+    display: none;
+
+
+}
+
+
+.bars{
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    padding-left: 10px;
+    padding-top: 9px;
+    background-color: antiquewhite;
+    top: 20px;
+    right: 60px;
+}
+
+.bars .fa{
+    color: blue;
+    font-size: 15px;
+    cursor: pointer;
+}
+.bars .fa:hover{
+    font-size: 20px;
+    color: black;
+}
